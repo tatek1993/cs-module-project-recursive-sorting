@@ -38,7 +38,7 @@ def merge_sort(arr):
 
     if len(arr) > 1:
 
-        # create a middle point to start from
+        # create a middle point to start from. We use ceil to round up
         middle = math.ceil((len(arr) - 1) / 2)
 
         # create variables to hold left and right halves of the array
