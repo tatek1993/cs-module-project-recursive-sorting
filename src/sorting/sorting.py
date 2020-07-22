@@ -1,3 +1,6 @@
+import math
+
+
 # TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge(arrA, arrB):
     elements = len(arrA) + len(arrB)
@@ -32,6 +35,20 @@ def merge(arrA, arrB):
 # TO-DO: implement the Merge Sort function below recursively
 def merge_sort(arr):
     # Your code here
+
+    if len(arr) > 1:
+
+        # create a middle point to start from
+        middle = math.ceil((len(arr) - 1) / 2)
+
+        # create variables to hold left and right halves of the array
+        left = arr[:middle]
+        right = arr[middle:]
+
+        # recursively call merge_sort on the left
+        # recursively call merge_sort on the right
+        # merge sort pieces
+        return merge(merge_sort(left), merge_sort(right))
 
     return arr
 
